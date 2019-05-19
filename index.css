@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+section.top {
+  padding: 1% 10%;
+  background: url('asset/weights.jpg'); /* fallback */
+  background-image: linear-gradient(to bottom, rgba(25, 29, 31, 0.8), rgba(0, 0, 0, 0.8)), url(asset/weights.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section.top ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+ul .left-menu,
+ul .right-menu {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul .right-menu {
+  width: 35%;
+  justify-content: space-around;
+}
+
+ul .right-menu .fa-envelope {
+  font-size: 20px;
+}
+
+ul .left-menu .logo {
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  font-size: 16px;
+}
+
+ul .left-menu .logo #logo-span {
+  color: #8681ea;
+}
+
+ul li,
+ul a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+ul li a {
+  padding: 6px 0;
+}
+
+ul li a:not(#logo):hover {
+  border-bottom: 2px solid #8681ea;
+}
+
+li.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 2.5rem;
+}
+li.profile-section img {
+  margin-right: 15px;
+}
+
+/* search section */
+
+.search-section {
+  color: #fff;
+  padding: 10px 50px;
+  text-align: center;
+}
+
+.search-section h2 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.search-section h2 span {
+  color: #9bff68;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.search-section .search-bar input {
+  background: #fff;
+  border: none;
+  padding: 15px;
+  width: 38%;
+  border-radius: 6px;
+}
+
+.search-section .search-bar input::placeholder {
+  font-style: italic;
+  font-size: 1.1em;
+  columns: #c6c6c6;
+}
+
+.search-section .search-bar button {
+  padding: 15px 50px;
+  background: #7e78e4;
+  border: none;
+  border-radius: 6px;
+  margin-left: 15px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.info-card-wrapper {
+  position: relative;
+  padding-top: 120px;
+}
+
+.info-cards_section {
+  display: flex;
+  position: absolute;
+  bottom: -100px;
+  margin-left: 12px;
+  border-radius: 8px;
+}
+
+.info-cards_section .info-card {
+  width: 250px;
+  height: 160px;
+  background: #fff;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: transform 0.2s;
+  /* box shadow */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.info-cards_section .info-card:first-child,
+.info-cards_section .info-card:last-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.info-cards_section .info-card:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.info-cards_section .info-card:hover {
+  transform: scale(1.1);
+  border-bottom: 2px solid #8681ea;
+  border-radius: 0 !important;
+}
+
+.info-cards_section .info-card img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Main body content */
+
+.main-content {
+  margin-top: 10%;
+}
+
+.main-content .sort {
+  text-align: right;
+  padding: 0 11%;
+}
+
+.main-content .sort span {
+  font-size: 13px;
+  color: #7e78e4;
+}
+
+.main-content .sort .fa-chevron-down {
+  color: #7e78e4;
+  margin-left: 5px;
+}
+
+/* details card */
+
+.fitness-detail_card {
+  padding: 10px;
+  width: 400px;
+  height: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+  box-sizing: border-box;
+}
+
+.fitness-detail_card .top {
+  display: flex;
+}
+
+.fitness-detail_card .top img {
+  margin-right: 20px;
+}
+
+.fitness-detail_card .top .details .head {
+  font-size: 15px;
+  font-weight: 1000;
+  -webkit-font-smoothing: antialiased;
+  margin: 5px 0;
+}
+
+.fitness-detail_card .top .details .author {
+  margin: 5px 0 5px;
+  font-size: 12px;
+}
+
+.fitness-detail_card .top .details .author span {
+  color: #8d8e8c;
+}
+
+.fitness-detail_card .top .details .description {
+  margin: 8px 0 5px;
+  font-size: 12px;
+  color: #8d8e8c;
+}
+
+.fitness-detail_card .bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.fitness-detail_card .bottom .left p {
+  font-size: 13px;
+  font-weight: 1000;
+  -webkit-font-smoothing: antialiased;
+  margin: 5px 0;
+}
+
+.fitness-detail_card .bottom .left p span {
+  font-size: 11px;
+  color: #8d8e8c;
+}
+
+.fitness-detail_card .bottom .left img {
+  border-radius: 50%;
+}
+
+.fitness-detail_card .bottom .left img:nth-child(2) {
+  position: absolute;
+  right: 50px;
+}
+.fitness-detail_card .bottom .left img:nth-child(3) {
+  position: absolute;
+  right: 30px;
+}
+.fitness-detail_card .bottom .left img:nth-child(4) {
+  position: absolute;
+  right: 10px;
+}
+
+.fitness-detail_card .bottom .left .people {
+  position: relative;
+  display: flex;
+}
+
+.fitness-detail_card .bottom .left .more {
+  height: 30px;
+  width: 30px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 50%;
+  z-index: 5;
+  position: absolute;
+  right: -15px;
+  text-align: center;
+  padding: 6px;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+.fitness-detail_card .bottom .right {
+  text-align: right;
+}
+.fitness-detail_card .bottom .right .all-ratings {
+  margin: 8px 0 5px;
+  font-size: 12px;
+  color: #8d8e8c;
+}
+
+.fitness-detail_card .bottom .right .fa-star {
+  color: gold;
+}
+
+.fitness-detail_card .bottom .right button {
+  padding: 10px 45px;
+  margin-top: 20px;
+  background: #8681ea;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+/* media query */
+
+/* potrait tab */
+@media only screen and (max-width: 1100px) {
+  .info-cards_section {
+    bottom: -60px;
+    margin-left: 12%;
+  }
+
+  .info-cards_section .info-card {
+    width: 160px;
+    height: 110px;
+    font-size: 12px;
+  }
+
+  .info-cards_section .info-card img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* landscape tab */
+
+@media only screen and (max-width: 768px) {
+  section.top ul .left-menu,
+  section.top ul .right-menu {
+    width: 45%;
+  }
+
+  .search-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .info-cards_section {
+    bottom: -60px;
+    margin-left: 1%;
+  }
+
+  .info-cards_section .info-card {
+    width: 150px;
+    height: 120px;
+    font-size: 12px;
+  }
+
+  .info-cards_section .info-card img {
+    width: 60px;
+    height: 60px;
+  }
+}
