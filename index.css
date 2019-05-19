@@ -24,45 +24,45 @@ section.top ul {
   justify-content: space-between;
 }
 
-ul .left-menu,
-ul .right-menu {
+section.top ul .left-menu,
+section.top ul .right-menu {
   width: 40%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-ul .right-menu {
+section.top ul .right-menu {
   width: 35%;
   justify-content: space-around;
 }
 
-ul .right-menu .fa-envelope {
+section.top ul .right-menu .fa-envelope {
   font-size: 20px;
 }
 
-ul .left-menu .logo {
+section.top ul .left-menu .logo {
   text-transform: uppercase;
   letter-spacing: -0.5px;
   font-size: 16px;
 }
 
-ul .left-menu .logo #logo-span {
+section.top ul .left-menu .logo #logo-span {
   color: #8681ea;
 }
 
-ul li,
-ul a {
+section.top ul li,
+section.top ul a {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
   font-size: 0.9em;
 }
-ul li a {
+section.top ul li a {
   padding: 6px 0;
 }
 
-ul li a:not(#logo):hover {
+section.top ul li a:not(#logo):hover {
   border-bottom: 2px solid #8681ea;
 }
 
@@ -172,6 +172,12 @@ li.profile-section img {
   margin-top: 10%;
 }
 
+.main-content .card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 15px;
+}
+
 .main-content .sort {
   text-align: right;
   padding: 0 11%;
@@ -190,6 +196,8 @@ li.profile-section img {
 /* details card */
 
 .fitness-detail_card {
+  display: block;
+  margin: 0 auto;
   padding: 10px;
   width: 400px;
   height: 250px;
@@ -304,7 +312,62 @@ li.profile-section img {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
 }
 
+footer.footer {
+  background: #000;
+  color: #fff;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer > div {
+  font-size: 13px;
+  min-width: 200px;
+}
+
+.footer address {
+  max-width: 300px;
+}
+
+.footer .navs > p,
+.footer #company-name {
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.footer .navs > p {
+  text-transform: uppercase;
+}
+
+.footer .navs ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .navs > ul li {
+  font-size: 14px;
+}
+
+.footer .navs > ul li > a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
 /* media query */
+
+@media only screen and (min-width: 1366px) {
+  .info-cards_section {
+    margin-left: 6%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .card-wrapper {
+    padding: 30px;
+  }
+}
 
 /* potrait tab */
 @media only screen and (max-width: 1100px) {
@@ -351,5 +414,14 @@ li.profile-section img {
   .info-cards_section .info-card img {
     width: 60px;
     height: 60px;
+  }
+
+  .fitness-detail_card {
+    width: 360px;
+    height: 270px;
+  }
+
+  footer.footer {
+    padding: 30px 100px;
   }
 }
